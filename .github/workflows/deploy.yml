@@ -22,6 +22,4 @@ jobs:
 
       # Step 3: Deploy to Staging
       - name: Deploy to Staging Server
-        run: |
-          echo "Deploying to Staging Server"
-          ssh -o StrictHostKeyChecking=no ${{ secrets.STAGING_SERVER_USER }}@${{ secrets.STAGING_SERVER_HOST }} && echo "Deployment complete"
+        run: ssh -o StrictHostKeyChecking=no ${{ secrets.STAGING_SERVER_USER }}@${{ secrets.STAGING_SERVER_HOST }}
