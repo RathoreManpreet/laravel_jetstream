@@ -22,7 +22,7 @@ jobs:
           username: ${{ secrets.STAGING_SERVER_USER }}
           key: ${{ secrets.STAGING_SERVER_KEY }}
           port: 22
-          script: whoami
+          script: ls -la
 
       # Step 3: Deploy to Staging
       # - name: Deploy to Staging Server
