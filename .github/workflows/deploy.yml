@@ -24,6 +24,4 @@ jobs:
       - name: Deploy to Staging Server
         run: |
           echo "Deploying to Staging Server"
-          ssh -o StrictHostKeyChecking=no ${{ secrets.STAGING_SERVER_USER }}@${{ secrets.STAGING_SERVER_HOST }} << EOF
-            echo "Deployment complete"
-          EOF
+          ssh -o StrictHostKeyChecking=no ${{ secrets.STAGING_SERVER_USER }}@${{ secrets.STAGING_SERVER_HOST }} && echo "Deployment complete"
